@@ -38,7 +38,7 @@ const update = catchError(async(req, res) => {
 const setGenres = catchError(async(req,res)=>{
     // buscamos el actor
     const {id} =req.params
-    const actor = await actor.findByPk(id)
+    const actor = await Actor.findByPk(id)
 
     // si no encontramos el actor 
     if(!actor) return res.sendStatus(404)
